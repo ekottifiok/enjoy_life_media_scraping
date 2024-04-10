@@ -25,7 +25,7 @@ def get_folder_metadata() -> Dict[str, Metadata]:
         file_path = path.join(folder_path, name)
         media_info = MediaInfo.parse(file_path)
 
-        for track in media_info.tracks:
+        for track in media_info.tracks:     # type: ignore
             if track.track_type == 'General' and isinstance(track.duration, int):
                 t = datetime.fromtimestamp(track.duration/1000)
                 if (t.hour == 1):

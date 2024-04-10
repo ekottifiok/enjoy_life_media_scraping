@@ -4,12 +4,10 @@ from enjoy_life_media_scraping.model.section import Section
 
 
 def handle_summary(sections: List[Section]):
-    print("Summary:")
+    print("\nSummary:")
     for section in sections:
-        print(f"\t{section.title}")
-        print("\t\tNot avaiable media:")
+        print(f"{section.title}")
+        print("Not avaiable media:")
         for item in section.not_available_media:
-            print(f"\t\t\t{item}")
-        print(f"\n\t\tAvaiable media {len(section.available_media)} copied to {argv[2]}")
-        # for item in section.available_media:
-        #     print(f"\t\t\t{item}")
+            print(f"\t{item}")
+        print(f"\nAvaiable media {len(section.available_media)} copied to {argv[2]}")
