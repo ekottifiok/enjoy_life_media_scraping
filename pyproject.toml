@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "enjoy-life-media-scraping"
+version = "0.1.0"
+description = ""
+authors = ["Ifiok Ekott <ekottifiok@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.31.0"
+pymediainfo = "^6.1.0"
+
+[tool.poetry.scripts]
+main = "enjoy_life_media_scraping.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
