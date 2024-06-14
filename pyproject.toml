@@ -1,18 +1,27 @@
 [tool.poetry]
 name = "enjoy-life-media-scraping"
 version = "0.1.0"
-description = ""
+description = "This package helps arrange all the media files in you computer based on what is available online"
 authors = ["Ifiok Ekott <ekottifiok@gmail.com>"]
 readme = "README.md"
+packages = [
+    {include = "src"}
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 beautifulsoup4 = "^4.12.3"
 requests = "^2.31.0"
 pymediainfo = "^6.1.0"
+pytest-playwright = "^0.5.0"
+pyppeteer = "^2.0.0"
+playwright = "^1.44.0"
 
 [tool.poetry.scripts]
-main = "enjoy_life_media_scraping.main:main"
+main = "src.main:main"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.2.3"
 
 [build-system]
 requires = ["poetry-core"]
